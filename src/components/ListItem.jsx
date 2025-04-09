@@ -2,9 +2,9 @@ import React from "react";
 
 function ListItem({ item, onDeleteItem, onUpdateItem }) {
   return (
-    <div>
-      <li className="list-group-item d-flex justify-content-between">
-        <div>
+    <div className="container row">
+      <li className="list-group-item d-flex justify-content-between mb-3">
+        <div className="col-10">
           <input
             className="form-check-input me-2"
             type="checkbox"
@@ -14,15 +14,18 @@ function ListItem({ item, onDeleteItem, onUpdateItem }) {
           <span
             style={item.completed ? { textDecoration: "line-through" } : {}}
           >
-            {item.title} - {item.quantity}
+            {item.title}
           </span>
         </div>
-        <button
-          className="btn btn-sm btn-danger"
-          onClick={() => onDeleteItem(item.id)}
-        >
-          X
-        </button>
+        <div>{item.quantity}</div>
+        <div>
+          <button
+            className="btn btn-sm btn-danger"
+            onClick={() => onDeleteItem(item.id)}
+          >
+            X
+          </button>
+        </div>
       </li>
     </div>
   );

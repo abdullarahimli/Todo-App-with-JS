@@ -1,6 +1,5 @@
 import React from "react";
 import ListItem from "./ListItem";
-import { products } from "../data.js";
 
 function List({ items, onDeleteItem, onUpdateItem }) {
   return (
@@ -19,7 +18,7 @@ function List({ items, onDeleteItem, onUpdateItem }) {
               ))}
           </ul>
         ) : (
-          <p className="text-danger">Listeniz bos</p>
+          <p className="text-danger p-0 mt-3 mb-0">Your list is empty</p>
         )}
       </>
     </div>

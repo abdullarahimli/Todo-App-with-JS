@@ -29,7 +29,7 @@ function Form({ onAddItem }) {
             <input
               className="form-control"
               type="text"
-              placeholder="Eleman ekle"
+              placeholder="Add a task"
               name="itemName"
               value={itemName}
               onChange={(e) => setItemName(e.target.value)}
@@ -52,7 +52,7 @@ function Form({ onAddItem }) {
           </div>
           <div className="col">
             <button className="btn btn-primary" type="submit">
-              Ekle
+              ADD
             </button>
           </div>
         </div>
